@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style >
+  
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  padding: 16px;
+  background-color: white;
+  align-items: center;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+
+a {
+  color: dodgerblue;
+}
+</style>
+<script type="text/javascript">
+function registerUser() {
+  var name=document.getElementById("name").value;
+  var email=document.getElementById("email").value;
+  var pass=document.getElementById("psw").value;
+  var dob=document.getElementById("birthday").value;
+  var accept=document.getElementById("acept").value;
+  document.writeln("entries <br><br>");
+  document.writeln("Name: "+name+"<br>Email: "+email+"<br>Password: "+pass+"<br>Date Of Birth: "+dob+"<br>Condition : "+accept);
+}
+</script>
+</head>
+<body>
+<form onsubmit="registerUser()">
+  <div class="container">
+    <h1 align="center">Register</h1>
+    <p align="center">Please fill in this form to create an account.</p>
+  
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter your name" required id="name">
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="birthday">Date Of Birth:</label>
+    <input type="date" id="birthday" name="birthday" max="2005-02-15" min="1968-02-15" required><br><br><br>
+
+    
+    <input type="checkbox" id="acept" name="birthday" required >
+    <label for="birthday">accept all term and condition</label>
+
+    <button type="submit" class="registerbtn">Submit</button>
+    
+  </div>
+  
+</form>
+</body>
+</html>
